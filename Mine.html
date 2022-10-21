@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mine</title>
+	<link rel="icon" href="./lib/images/Sunshine_Open.png">
+  <link rel="stylesheet" href="./lib/css/mine.css">
+  <script src="./lib/js/d3.min.js"></script>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+  <div id="Nav">
+		<ul class="U_Main">
+			<li class="Logo">
+				<img src="./lib/images/logo.png" alt="logo">
+			</li>
+			<li class="nav_Home">
+				<a class="Home" href="./index.html">
+					<img src="./lib/images/Nav/nav_Home.png" alt="Home">
+					<p class="Home_P">首页</p>
+				</a>
+			</li>
+			<li class="nav_Picture">
+				<a class="Picture" href="./Picture.html">
+					<img src="./lib/images/Nav/nav_Picture.png" alt="Picture">
+					<p class="Picture_P">照片</p>
+				</a>
+			</li>
+      <li class="nav_Mine">
+				<a class="Mine" href="#">
+					<img src="./lib/images/Nav/nav_Mine.png" alt="Mine">
+					<p class="Mine_P">Mine</p>
+				</a>
+			</li>			
+		</ul>
+	</div>
+
+  <div class="Main">
+    <div class="cont s-inactive">
+      <div class="cont_inner">
+          <div class="el">
+              <div class="el_overflow">
+                  <div class="el_inner">
+                      <div class="el_bg"></div>
+                      <div class="el_preview-cont">
+                          <h2 class="el_heading">1.19</h2>
+                          <p class="title_text">荒野</p>
+                      </div>
+                      <div class="el_content">
+                          <div class="el_text" id="The_Wild">
+                            <video class="Video" id="Video_The_Wild" src="./lib/video/The_Wild.mp4" controls="controls"></video>
+                          </div>
+                          <div class="el_close-btn"></div>
+                      </div>
+                  </div>
+              </div>
+              <div class="el_index">
+                  <div class="el_index-back">1</div>
+                  <div class="el_index-front">
+                      <div class="el_index-overlay" data-index="1">1</div>
+                  </div>
+              </div>
+          </div>
+          <div class="el">
+              <div class="el_overflow">
+                  <div class="el_inner">
+                      <div class="el_bg"></div>
+                      <div class="el_preview-cont">
+                          <h2 class="el_heading">1.18~1.17</h2>
+                          <p class="title_text">洞穴与山崖</p>
+                      </div>
+                      <div class="el_content">
+                          <div class="el_text" id="Caves_and_Cliffs">
+                            <video class="Video" id="Video_Caves_and_Cliffs" src="./lib/video/Caves_and_Cliffs.mp4" controls="controls"></video>
+                          </div>
+                          <div class="el_close-btn"></div>
+                      </div>
+                  </div>
+              </div>
+              <div class="el_index">
+                  <div class="el_index-back">2</div>
+                  <div class="el_index-front">
+                      <div class="el_index-overlay" data-index="2">2</div>
+                  </div>
+              </div>
+          </div>
+          <div class="el">
+              <div class="el_overflow">
+                  <div class="el_inner">
+                      <div class="el_bg"></div>
+                      <div class="el_preview-cont">
+                          <h2 class="el_heading">1.16</h2>
+                          <p class="title_text">下界</p>
+                      </div>
+                      <div class="el_content">
+                          <div class="el_text">
+                            <video class="Video" id="Video_Nether" width="1280" height="720" src="./lib/video/Nether.mp4" controls="controls"></video>
+                          </div>
+                          <div class="el_close-btn"></div>
+                      </div>
+                  </div>
+              </div>
+              <div class="el_index">
+                  <div class="el_index-back">3</div>
+                  <div class="el_index-front">
+                      <div class="el_index-overlay" data-index="3">3</div>
+                  </div>
+              </div>
+          </div>
+          <div class="el">
+              <div class="el_overflow">
+                  <div class="el_inner">
+                      <div class="el_bg"></div>
+                      <div class="el_preview-cont">
+                          <h2 class="el_heading">1.15</h2>
+                          <p class="title_text">嗡嗡蜂群</p>
+                      </div>
+                      <div class="el_content">
+                          <div class="el_text">
+                            <video class="Video" id="Video_Buzzy_Bees" width="1280" height="720" src="./lib/video/Buzzy_Bees.mp4" controls="controls"></video>
+                          </div>
+                          <div class="el_close-btn"></div>
+                      </div>
+                  </div>
+              </div>
+              <div class="el_index">
+                  <div class="el_index-back">4</div>
+                  <div class="el_index-front">
+                      <div class="el_index-overlay" data-index="4">4</div>
+                  </div>
+              </div>
+          </div>
+          <div class="el">
+              <div class="el_overflow">
+                  <div class="el_inner">
+                      <div class="el_bg"></div>
+                      <div class="el_preview-cont">
+                          <h2 class="el_heading">1.14</h2>
+                          <p class="title_text">村庄与掠夺</p>
+                      </div>
+                      <div class="el_content">
+                          <div class="el_text">
+                            <video class="Video" id="Video_Village_and_Pillage" width="1280" height="720" src="./lib/video/Village_and_Pillage.mp4" controls="controls"></video>
+                          </div>
+                          <div class="el_close-btn"></div>
+                      </div>
+                  </div>
+              </div>
+              <div class="el_index">
+                  <div class="el_index-back">5</div>
+                  <div class="el_index-front">
+                      <div class="el_index-overlay" data-index="5">5</div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+	</div>
+</body>
+<script src="./lib/js/main.js"></script>
+<script src="./lib/js/d3.min.js"></script>
+<script src="./lib/js/mine.js"></script>
+</html>
