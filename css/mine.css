@@ -1,0 +1,450 @@
+*{padding: 0%;margin: 0%;box-sizing: border-box;}
+
+body{
+	position: relative;
+}
+
+.Logo img{
+	width: 168px;
+	height: 85px;
+	margin-right: 69rem;
+}
+
+#Nav{
+	width: 100vw;
+	height: 92px;
+	background-image: url("../images/nav_bg_a.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: fixed;
+	z-index: 10086;
+}
+
+.U_Main{
+	height: 92px;
+	display: flex;
+	justify-content: flex-end;
+	align-content:	center;
+}
+
+.U_Main li{
+	align-self: center;
+	color: #fff;
+	list-style-type: none;
+	margin: 65px;
+}
+
+.U_Main li a{
+	display: flex;
+	flex-direction: column;
+	text-decoration: none;
+	color: #fff;
+}
+
+.U_Main li a p{
+	font-size: 12px;
+	margin-top: 8px;
+	text-align: center;
+}
+
+.Main{
+  height: 1000px;
+  padding-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.cont {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    padding: 80px 70px;
+}
+
+.cont_inner {
+    position: relative;
+    height: 100%;
+}
+
+.el {
+    /* 绝对定位，如果父级是相对定位，那么现在就是和父级重合 */
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 19.2%;
+    height: 100%;
+    background-color: #252525;
+    transition: transform 0.6s 0.7s, width 0.7s, opacity 0.6s 0.7s, z-index 0s 1.3s;
+}
+
+.el_overflow {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+
+.el_inner {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    transition: transform 1s;
+}
+
+.cont.s-inactive .el_inner {
+    transform: translate3d(0, 100%, 0);
+}
+
+.el_bg {
+    position: relative;
+    width: calc(100vw - 140px);
+    height: 100%;
+    transition: transform 0.6s 0.7s;
+    
+}
+
+.cont_inner:hover .el_bg::after {
+    opacity: 1;
+}
+
+.el:hover .el_bg::after {
+    opacity: 0;
+}
+
+.el_bg::before {
+    position: absolute;
+    content: "";
+    top: -5%;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    background-size: cover;
+    background-position: center center;
+    transition: transform 1s;
+    transform: translate3d(0, 0, 0) scale(1);
+}
+
+.cont.s-inactive .el_bg::before {
+    transform: translate3d(0, -100%, 0) scale(1.2);
+}
+
+.el:nth-child(2) {
+    transform-origin: 155% 50%;
+    transform: translate3d(105%, 0, 0);
+}
+
+.el:nth-child(3) {
+    transform-origin: 260% 50%;
+    transform: translate3d(210%, 0, 0);
+}
+
+.el:nth-child(4) {
+    transform-origin: 365% 50%;
+    transform: translate3d(315%, 0, 0);
+}
+
+.el:nth-child(5) {
+    transform-origin: 470% 50%;
+    transform: translate3d(420%, 0, 0);
+}
+
+.el:nth-child(1) .el_bg::before {
+    transition-delay: 0s;
+    background-image: url("../images/Mine/MC_Wild.png");
+}
+
+.el:nth-child(2) .el_bg::before {
+    transition-delay: 0.1s;
+    background-image: url("../images/Mine/MC_Caves_and_Cliffs.jpg");
+}
+
+.el:nth-child(3) .el_bg::before {
+    transition-delay: 0.2s;
+    background-image: url("../images/Mine/MC_Nether.png");
+}
+
+.el:nth-child(4) .el_bg::before {
+    transition-delay: 0.3s;
+    background-image: url("../images/Mine/MC_mediablock.jpg");
+}
+
+.el:nth-child(5) .el_bg::before {
+    transition-delay: 0.4s;
+    background-image: url("../images/Mine/MC_villagepilage.png");
+}
+
+.el:nth-child(1) .el_inner {
+    transition-delay: 0s;
+}
+
+.el:nth-child(2) .el_inner {
+    transition-delay: 0.1s;
+}
+
+.el:nth-child(3) .el_inner {
+    transition-delay: 0.2s;
+}
+
+.el:nth-child(4) .el_inner {
+    transition-delay: 0.3s;
+}
+
+.el:nth-child(5) .el_inner {
+    transition-delay: 0.4s;
+}
+
+/* 背景遮罩 */
+.el_bg::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.6s;
+}
+
+.el_index {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: -80px;
+    left: 0;
+    font-size: 20vw;
+    font-weight: bold;
+    text-align: center;
+    min-height: 250px;
+    overflow: hidden;
+    line-height: 0.85;
+    transition: transform 0.5s,opacity 0.3s 1.4s;
+    transform: translate3d(0,1vw,0);
+}
+
+/* 使两种颜色合在一起 */
+.el_index-back,
+.el_index-front {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.el_index-back {
+    color: #2f3840;
+    opacity: 0;
+    transition: opacity 0.25s 0.25s;
+}
+
+.el:hover .el_index-back {
+    opacity: 1;
+}
+
+.el_index-overlay {
+    overflow: hidden;
+    position: relative;
+    color: transparent;
+    transform: translate3d(0, 100%, 0);
+    transition: transform 0.5s 0.1s;
+}
+
+.el_index-overlay::before {
+    content: attr(data-index);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    transform: translate3d(0, -100%, 0);
+    transition: transform 0.5s 0.1s;
+}
+
+.el:hover .el_index-overlay {
+    transform: translate3d(0, 0, 0);
+}
+
+.el:hover .el_index-overlay::before {
+    transform: translate3d(0, 0, 0);
+}
+
+.el_preview-cont {
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s 1.2s;
+}
+
+.el_heading {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 48px;
+}
+
+.title_text{
+    color: #FFF;
+    font-size: 18px;
+}
+
+.el.s-active {
+    z-index: 1;
+    width: 100%;
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.6s, width 0.7s 0.7s, z-index 0s;
+}
+
+.el.s-active .el_bg::before {
+    transition-delay: 0.6s;
+    transform: scale(1.1);
+    transition: 0.6s;
+}
+
+.cont.s-el-active .el_bg::after {
+    transition: opacity 0.5s 1.4s;
+    opacity: 1 !important;
+}
+
+.cont.s-el-active .el_preview-cont {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.5s;
+}
+
+.cont.s-el-active .el_index {
+    transition: transform 0.5s, opacity 0.3s;
+    opacity: 0;
+}
+
+.el_content {
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    pointer-events: none;
+}
+
+.el.s-active .el_content {
+    z-index: 2;
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.5s 1.4s;
+}
+
+.el_text {
+    text-transform: uppercase;
+    font-size: 40px;
+    color: #fff;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.el_close-btn {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 10px;
+    right: 10px;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.el.s-active .el_close-btn {
+    z-index: 5;
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0s 1.4s;
+}
+
+.el.s-active .el_close-btn video{
+}
+
+.el_close-btn::before,
+.el_close-btn::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 8px;
+    background-color: #fff;
+    margin-top: -4px;
+    opacity: 0;
+}
+
+.el.s-active .el_close-btn::before,
+.el.s-active .el_close-btn::after {
+    opacity: 1;
+}
+
+.el_close-btn::before {
+    transform: rotate(45deg) translateX(100%);
+}
+
+.el_close-btn::after {
+    transform: rotate(-45deg) translateX(100%);
+}
+
+.el.s-active .el_close-btn::before {
+    transition: all 0.3s 1.8s;
+    transform: rotate(45deg) translateX(0);
+}
+
+.el.s-active .el_close-btn::after {
+    transition: all 0.3s 2s;
+    transform: rotate(-45deg) translateX(0);
+}
+
+.cont.s-el-active .el:nth-child(1):not(.s-active) {
+    transform: scale(0.5) translate3d(0%, 0, 0);
+    opacity: 0;
+    transition: transform 0.95s, opacity 0.95s;
+}
+
+.cont.s-el-active .el:nth-child(2):not(.s-active) {
+    transform: scale(0.5) translate3d(50%, 0, 0);
+    opacity: 0;
+    transition: transform 0.95s, opacity 0.95s;
+}
+
+.cont.s-el-active .el:nth-child(3):not(.s-active) {
+    transform: scale(0.5) translate3d(100%, 0, 0);
+    opacity: 0;
+    transition: transform 0.95s, opacity 0.95s;
+}
+
+.cont.s-el-active .el:nth-child(4):not(.s-active) {
+    transform: scale(0.5) translate3d(150%, 0, 0);
+    opacity: 0;
+    transition: transform 0.95s, opacity 0.95s;
+}
+
+.cont.s-el-active .el:nth-child(5):not(.s-active) {
+    transform: scale(0.5) translate3d(200%, 0, 0);
+    opacity: 0;
+    transition: transform 0.95s, opacity 0.95s;
+}
